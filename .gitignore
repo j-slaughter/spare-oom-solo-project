@@ -1,0 +1,9 @@
+# Ignore OS files
+.DS_Store
+
+# Ignore list of package dependencies
+node_modules
+
+# Ignore build output directory from webpack
+build/
+
