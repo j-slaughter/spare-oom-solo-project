@@ -2,8 +2,12 @@
 .DS_Store
 
 # Ignore list of package dependencies
-node_modules
+node_modules/
 
-# Ignore build output directory from webpack
+# Ignore build output from webpack
 build/
 
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
