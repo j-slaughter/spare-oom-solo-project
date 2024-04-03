@@ -2,8 +2,10 @@ import React from 'react';
 
 function App() {
     return (
-        <div>
-            <h1>Hello Worlds!</h1>
+        <div className='App'>
+            <h1>Hello World!</h1>
+            <button>Click Me!</button>
+            <p>This is the start of my project.</p>
         </div>
     );
 };
