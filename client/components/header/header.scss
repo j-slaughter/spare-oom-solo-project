@@ -24,4 +24,15 @@
             border-radius: 50%;
         }
     }
+    .menuItems {
+        list-style-type: none;
+        .menuItem {
+            height: 60px;
+            margin-top: 20px;
+            color: white;
+            &:hover {
+                color: var(--orange);
+            }
+        }
+    }
 }
