@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: './client/index.js',
@@ -26,11 +27,18 @@ module.exports = {
             test: /\.s[ac]ss$/i,
             use: ['style-loader', 'css-loader', 'sass-loader'],
           },
+          {
+            test: /\.(jpg|png)$/,
+            use: {
+              loader: 'url-loader',
+            },
+          },
         ]
     },
     plugins: [
       new HTMLWebpackPlugin({
         template: './client/index.html',
-      })
+      }),
+      new Dotenv(),
     ],
 };
