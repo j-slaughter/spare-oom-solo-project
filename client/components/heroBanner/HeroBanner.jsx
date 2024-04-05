@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './heroBanner.scss';
 
+import Img from '../imageLoader/Img.jsx';
+import ContentWrapper from '../contentWrapper/ContentWrapper.jsx';
+
 // import to save data to store state
 import dataLoader from '../../api.js';
 
@@ -36,9 +39,12 @@ const HeroBanner = () => {
 
     return (
         <div className='heroBanner'>
-            <div className='wrapper'>
+            {!loading && <div className='backdrop-img'>
+                <Img src={background} />
+            </div>}
+            <div className='opacity-layer'></div>
+            <ContentWrapper>
                 <div className='heroBannerContent'>
-                    <img src={background}/>
                     <span className='title'>The Spare Oom</span>
                     <span className='subTitle'>Escape into your film fantasy destinations. 
                     Discover the real-life places of your favorite movies.</span>
@@ -48,7 +54,7 @@ const HeroBanner = () => {
                         <button onClick={searchQuery}>Enter the wardrobe!</button>
                     </div>
                 </div>
-            </div>
+            </ContentWrapper>
         </div>
     );
 };
