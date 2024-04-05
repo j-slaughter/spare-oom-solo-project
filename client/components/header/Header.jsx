@@ -15,6 +15,9 @@ const Header = () => {
                 <div className='logo' onClick={() => navigate('/')}>
                     <img src={logo} alt='' />
                 </div>
+                <ul className='menuItems'>
+                    <li className='menuItem'>Login</li>
+                </ul>
             </ContentWrapper>
         </header>
     );
