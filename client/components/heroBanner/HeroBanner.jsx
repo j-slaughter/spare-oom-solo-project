@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './heroBanner.scss';
 
-import Img from '../imageLoader/Img.jsx';
+import Img from '../Img.jsx';
 import ContentWrapper from '../contentWrapper/ContentWrapper.jsx';
 
 // import to save data to store state
@@ -39,9 +39,9 @@ const HeroBanner = () => {
 
     return (
         <div className='heroBanner'>
-            {!loading && <div className='backdrop-img'>
+            {!loading && (<div className='backdrop-img'>
                 <Img src={background} />
-            </div>}
+            </div>)}
             <div className='opacity-layer'></div>
             <ContentWrapper>
                 <div className='heroBannerContent'>
