@@ -26,9 +26,11 @@
     }
     .menuItems {
         list-style-type: none;
+        display: flex;
         .menuItem {
             height: 60px;
             margin-top: 20px;
+            margin-left: 15px;
             color: white;
             &:hover {
                 color: var(--orange);

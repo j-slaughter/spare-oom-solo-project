@@ -17,6 +17,7 @@ const Header = () => {
                 </div>
                 <ul className='menuItems'>
                     <li className='menuItem'>Login</li>
+                    <li className='menuItem' onClick={() => navigate('/blog')}>Blog</li>
                 </ul>
             </ContentWrapper>
         </header>
