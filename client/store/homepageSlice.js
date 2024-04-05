@@ -10,8 +10,8 @@ export const homepageSlice = createSlice({
   name: 'homepage',
   initialState,
   reducers: {
-    // Update Api URL in state
-    getApiURL: (state, action) => {
+    // Update url in state
+    getURL: (state, action) => {
         state.url = action.payload;
     },
     // Update genres in state
@@ -22,6 +22,6 @@ export const homepageSlice = createSlice({
 });
 
 // Action creators generated for each case reducer function per docs
-export const { getApiURL, getGenres } = homepageSlice.actions;
+export const { getURL, getGenres } = homepageSlice.actions;
 
 export default homepageSlice.reducer;
