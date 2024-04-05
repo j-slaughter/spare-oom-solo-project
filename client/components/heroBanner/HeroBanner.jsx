@@ -47,7 +47,7 @@ const HeroBanner = () => {
                 <div className='heroBannerContent'>
                     <span className='title'>The Spare Oom</span>
                     <span className='subTitle'>Escape into your film fantasy destinations. 
-                    Discover the real-life places of your favorite movies.</span>
+                    <p></p>Discover the real-life places of your favorite movies.</span>
                     <div className='searchInput'>
                         <input type='text' placeholder='Search for your escape...' 
                         onKeyUp={searchQuery} onChange={(e) => setQuery(e.target.value)}></input>
