@@ -1,11 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './header.scss';
 
+import ContentWrapper from '../contentWrapper/ContentWrapper.jsx';
+import logo from '../../assets/wardrobe-logo.png';
+
 const Header = () => {
+    
+    const navigate = useNavigate();
+
     return (
-        <div>
-            Header
-        </div>
+        <header className='header'>
+            <ContentWrapper>
+                <div className='logo' onClick={() => navigate('/')}>
+                    <img src={logo} alt='' />
+                </div>
+            </ContentWrapper>
+        </header>
     );
 };
 
