@@ -1,0 +1,49 @@
+@import '../../mixins.scss';
+.flexcontainer {
+    display: flex;
+}
+
+.right {
+    display: inline-block;
+    .mapImg {
+        width: 95%;
+        display: block;
+        border-radius: 12px;
+        margin: 20px 20px;
+        @include md {
+            max-width: 700px;
+        }
+    }
+}
+.left {
+    display: inline-block;
+    min-width: 36%;
+    color: white;
+    .title {
+        font-size: 28px;
+        line-height: 40px;
+        @include md {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+    .info {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+        display: flex;
+        .infoItem {
+            margin-right: 10px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .text {
+            margin-right: 10px;
+            opacity: 0.5;
+            line-height: 24px;
+            &.bold {
+                font-weight: 600;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -16,6 +16,7 @@ const DetailsBanner = ({ crew }) => {
     
     const director = crew?.filter((f) => f.job === "Director");
     const writer = crew?.filter((f) => f.job === "Screenplay" || f.job === "Story" || f.job === "Writer");
+    const location = data?.production_countries[0].name;
     
     return (
         <div className="detailsBanner">
@@ -111,7 +112,7 @@ const DetailsBanner = ({ crew }) => {
                                                     Location(s):{" "}
                                                 </span>
                                                 <span className="text">
-                                                    <span>Test</span>
+                                                    <span>{location}</span>
                                                 </span>
                                             </div>
                                         </div>

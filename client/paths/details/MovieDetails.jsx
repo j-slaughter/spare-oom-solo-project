@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import dataLoader from "../../api.js";
 import DetailsBanner from "../../components/detailsBanner/DetailsBanner.jsx";
-import Locations from '../../components/Locations.jsx';
+import Locations from '../../components/locations/Locations.jsx';
 
 const MovieDetails = () => {
     const { id } = useParams();
