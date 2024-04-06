@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { fetchDataFromApi } from '../api.js';
-import { getURL, getGenres } from '../store/homepageSlice.js';
+import { getURL } from '../store/homepageSlice.js';
 
 // import React components
 import Header from './header/Header.jsx';
 import Footer from './footer/Footer.jsx';
 import Home from '../paths/Home.jsx';
-import Explore from '../paths/explore/Explore.jsx';
 import Search from '../paths/search/Search.jsx';
 import Details from '../paths/details/MovieDetails.jsx';
 import Blog from '../paths/blog/Blog.jsx';
@@ -43,9 +42,8 @@ function App() {
         <Header />
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/:mediaType/:id' element={<Details />} />
             <Route path='/search/:query' element={<Search />} />
-            <Route path='/explore/:mediaType' element={<Explore />} />
+            <Route path='/:mediaType/:id' element={<Details />} />
             <Route path='/blog' element={<Blog />} />
         </Routes>
         <Footer />
